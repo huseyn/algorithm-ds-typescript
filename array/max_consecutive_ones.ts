@@ -11,9 +11,9 @@
     Output: 2
  */
 
-var findMaxConsecutiveOnes = function (nums: number[]) {
-  let maxCount = 0;
-  let counter = 0;
+const findMaxConsecutiveOnes = function (nums: number[]) {
+  let maxCount: number = 0;
+  let counter: number = 0;
   for (let i = 0; i < nums.length; i++) {
     if (nums[i] === 1) {
       counter++;
