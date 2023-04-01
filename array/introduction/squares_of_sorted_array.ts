@@ -12,7 +12,7 @@
     Output: [4,9,9,49,121]
  */
 
-const sortedSquares = function (nums: number[]) {
+const sortedSquares = function (nums: number[]): number[] {
   const n: number = nums.length;
   let left: number = 0;
   let right: number = n - 1;
