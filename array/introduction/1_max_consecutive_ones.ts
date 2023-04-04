@@ -26,4 +26,19 @@ const findMaxConsecutiveOnes = function (nums: number[]): number {
   return maxCount > counter ? maxCount : counter;
 };
 
+const findMaxConsecutiveElement = function(nums: number[]): number {
+  let maxCount = 0, counter = 0, item = nums[0];
+  for(let i = 0; i < nums.length; i++) {
+      if(nums[i] === item) {
+          counter++;
+      }else {
+          maxCount = maxCount > counter ? maxCount : counter;
+          counter = 0;
+          item = nums[i]
+      }
+  }
+  
+  return maxCount > counter ? maxCount : counter;
+};
+
 findMaxConsecutiveOnes([1, 1, 0, 1, 1, 1]);
