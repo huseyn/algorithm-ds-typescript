@@ -17,15 +17,22 @@
  */
 
 const duplicateZeros = function (nums: number[]) {
-  let i: number = 0,
-    sh: number = 0;
-  for (i = 0; sh + i < nums.length; i++) {
-    if (nums[i] === 0) {
-      sh += 1;
-    }
+  let zeroes: number = 0;
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[i] === 0) zeroes++;
   }
-  for (i = i - 1; sh > 0; --i) {
-    if (i + sh < nums.length) nums[i + sh] = nums[i];
-    if (nums[i] == 0) nums[i + --sh] = nums[i];
+  let i = nums.length - 1,
+    j = nums.length - 1 + zeroes;
+  while (i !== j) {
+    if (j < nums.length) nums[j] = nums[i];
+    j--;
+
+    if (nums[i] === 0) {
+      if (j < nums.length) nums[j] = nums[i];
+      j--;
+    }
+    i--;
   }
 };
+
+duplicateZeros([1, 0, 2, 3, 0, 4, 5, 0]);

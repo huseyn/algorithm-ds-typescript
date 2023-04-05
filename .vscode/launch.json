@@ -9,7 +9,7 @@
       "request": "launch",
       "name": "Debug TypeScript",
       "skipFiles": ["<node_internals>/**"],
-      "program": "${workspaceFolder}/array/max_consecutive_ones.ts",
+      "program": "${workspaceFolder}/array/inserting/duplicate_zeros.ts",
       "runtimeArgs": [
         "-r",
         "ts-node/register",
