@@ -36,13 +36,12 @@ const merge_sorted_array = function (
 ) {
   let r1: number = m - 1,
     r2: number = n - 1;
-  for (let w = m + n - 1; w >= 0; w--) {
+  for (let w: number = m + n - 1; w >= 0; w--) {
     if (r1 >= 0 && r2 >= 0) {
       nums1[w] = nums1[r1] > nums2[r2] ? nums1[r1--] : nums2[r2--];
     } else if (r1 >= 0) nums1[w] = nums1[r1--];
     else nums1[w] = nums2[r2--];
   }
-  return;
 };
 
 merge_sorted_array([1, 2, 3], 3, [2, 5, 6], 3);
