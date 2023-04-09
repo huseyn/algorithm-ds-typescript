@@ -16,6 +16,7 @@
     Explanation: 2 does not exist in nums so return -1
  */
 
+
 function search(nums: number[], target: number): number {
     let start: number = 0, end: number = nums.length - 1;
     while (start <= end) {
