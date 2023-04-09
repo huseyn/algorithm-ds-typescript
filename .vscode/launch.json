@@ -9,7 +9,7 @@
       "request": "launch",
       "name": "Debug TypeScript",
       "skipFiles": ["<node_internals>/**"],
-      "program": "${workspaceFolder}/array/inserting/merge_sorted_array.ts",
+      "program": "${workspaceFolder}/array/challanges/5_search_insert_position.ts",
       "runtimeArgs": [
         "-r",
         "ts-node/register",
