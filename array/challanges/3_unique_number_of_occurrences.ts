@@ -21,6 +21,7 @@
 function uniqueOccurrences(arr: number[]): boolean {
   const map = new Map<number, number>();
   for (let i = 0; i < arr.length; i++) {
+    //Occurrence count for each element
     let curr = map.get(arr[i]) ? map.get(arr[i]) : 0;
     map.set(arr[i], curr + 1);
   }
