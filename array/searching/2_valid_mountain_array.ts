@@ -29,3 +29,5 @@ function validMountainArray(nums: number[]) {
 
   return i == n - 1;
 }
+
+validMountainArray([0,3,2,1])
