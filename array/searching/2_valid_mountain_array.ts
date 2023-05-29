@@ -21,7 +21,7 @@ function validMountainArray(nums: number[]) {
   const n = nums.length;
   let i = 0;
 
-  while (nums[i] < nums[i + 1]) i++;
+  while (i + 1 < n && nums[i] < nums[i + 1]) i++;
 
   if (i === 0 || n - 1 === i) return false;
 
@@ -30,4 +30,4 @@ function validMountainArray(nums: number[]) {
   return i == n - 1;
 }
 
-validMountainArray([0,3,2,1])
+validMountainArray([0, 3, 2, 1]);
