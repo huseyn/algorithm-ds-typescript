@@ -16,6 +16,7 @@
     Explanation: After calling your function, the input array is modified to: [1,2,3]
  */
 
+// this work if possible to write i indexed element to j iondexed element. j index should not be out of array length
 const duplicateZeros = function (nums: number[]) {
   let zeroes: number = 0;
   for (let i = 0; i < nums.length; i++) {
