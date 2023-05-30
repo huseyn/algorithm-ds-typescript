@@ -1,4 +1,4 @@
-function same(arr1: number[], arr2: number[]) {
+function checkValues(arr1: number[], arr2: number[]) {
   if (arr1.length !== arr2.length) return false;
 
   const frequencyCounter1: { [key: string]: number } = {};
