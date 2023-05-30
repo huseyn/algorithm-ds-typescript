@@ -11,10 +11,9 @@ function same(arr1: number[], arr2: number[]) {
     frequencyCounter2[val] = (frequencyCounter2[val] || 0) + 1;
 
   for (let key in frequencyCounter1) {
-    const parsedKey = parseFloat(key);
-    if (!(parsedKey ** 2 in frequencyCounter2)) return false;
+    if (!(Number(key) ** 2 in frequencyCounter2)) return false;
 
-    if (frequencyCounter2[parsedKey ** 2] !== frequencyCounter1[parsedKey])
+    if (frequencyCounter2[Number(key) ** 2] !== frequencyCounter1[Number(key)])
       return false;
   }
 
