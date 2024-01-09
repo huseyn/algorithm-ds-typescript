@@ -26,7 +26,7 @@ const sortedSquares = function (nums: number[]): number[] {
       square = nums[left];
       left++;
     }
-    result[i] = square * square;
+    result[i] = square ** 2;
   }
   return result;
 };
