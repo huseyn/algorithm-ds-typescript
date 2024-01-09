@@ -23,17 +23,13 @@
  * @param {number[]} nums
  * @return {number}
  */
-const findNumbers = function (nums: number[]): number {
-  let total: number = 0;
-  for (let i = 0; i < nums.length; i++) {
-    let currentItem: number = nums[i];
-    let currentItemDigits: number = 0;
-    while (Math.trunc(currentItem) > 0) {
-      currentItem = Math.trunc(currentItem / 10);
-      currentItemDigits++;
+function findNumbers(nums: number[]): number {
+    let counter = 0;
+    for (let i = 0; i < nums.length; i++) {
+        if (nums[i].toString().length % 2 === 0) {
+            counter++;
+        }
     }
-    if (currentItemDigits % 2 === 0) total++;
-  }
 
-  return total;
-};
+    return counter;
+}
