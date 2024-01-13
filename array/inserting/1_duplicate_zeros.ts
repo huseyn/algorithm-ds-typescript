@@ -36,4 +36,33 @@ const duplicateZeros = function (nums: number[]) {
   }
 };
 
+const duplicateZerosV2 = function(nums: number[]) {
+  let possibleDups = 0;
+  let length = nums.length - 1;
+
+  // Count the number of zeros to be duplicated
+  for (let i = 0; i <= length - possibleDups; i++) {
+    if (nums[i] === 0) {
+      if (i === length - possibleDups) {
+        // Handle the case where the last element is zero
+        nums[length] = 0;
+        length--;
+        break;
+      }
+      possibleDups++;
+    }
+  }
+
+  // Duplicate zeros and shift elements
+  for (let i = length - possibleDups; i >= 0; i--) {
+    if (nums[i] === 0) {
+      nums[i + possibleDups] = 0;
+      possibleDups--;
+      nums[i + possibleDups] = 0;
+    } else {
+      nums[i + possibleDups] = nums[i];
+    }
+  }
+};
+
 duplicateZeros([1, 0, 2, 3, 0, 4, 5, 0]);
