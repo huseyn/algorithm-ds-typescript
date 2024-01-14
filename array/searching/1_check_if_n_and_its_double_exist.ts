@@ -18,21 +18,14 @@
     Explanation: There is no i and j that satisfy the conditions.
  */
 
-function checkIfExist(nums: number[]) {
+function checkIfExist(nums: number[]): boolean {
   const set = new Set<number>();
   for (let i = 0; i < nums.length; i++) {
     if (set.has(nums[i])) return true;
-    else {
-      if (nums[i] % 2 === 0) {
-        if (nums[i] === 0) set.add(nums[i]);
-        else {
-          set.add(nums[i] * 2);
-          set.add(nums[i] / 2);
-        }
-      } else {
-        set.add(nums[i] * 2);
-      }
-    }
+    if (nums[i] % 2 === 0) {
+      set.add(nums[i] * 2);
+      set.add(nums[i] / 2);
+    } else set.add(nums[i] * 2);
   }
 
   return false;
