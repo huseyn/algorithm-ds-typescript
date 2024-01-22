@@ -21,7 +21,7 @@
     It does not matter what you leave beyond the returned k (hence they are underscores).
  */
 
-const removeDuplicates = function (nums: number[]): number {
+const removeDuplicates2 = function (nums: number[]): number {
   let insertIndex: number = 1;
   for (let i: number = 1; i < nums.length; i++) {
     if (nums[i] !== nums[i - 1]) nums[insertIndex++] = nums[i];
