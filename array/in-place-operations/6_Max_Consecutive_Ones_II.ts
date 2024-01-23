@@ -6,7 +6,7 @@ Output: 4
 Explanation: 
 - If we flip the first zero, nums becomes [1,1,1,1,0,1] and we have 4 consecutive ones.
 - If we flip the second zero, nums becomes [1,0,1,1,1,1] and we have 4 consecutive ones.
-The max number of consecutive ones is 4.
+The max number of consecutive ones is 4
 
  */
 
