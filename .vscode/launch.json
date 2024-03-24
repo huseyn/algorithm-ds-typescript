@@ -9,7 +9,7 @@
       "request": "launch",
       "name": "Debug TypeScript",
       "skipFiles": ["<node_internals>/**"],
-      "program": "${workspaceFolder}/array/in-place-operations/6_Max_Consecutive_Ones_II.ts",
+      "program": "${workspaceFolder}/array/in-place-operations/",
       "runtimeArgs": [
         "-r",
         "ts-node/register",
